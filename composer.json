@@ -1,0 +1,22 @@
+{
+    "name": "springimport/magento2-module-catalog-dropdown-sort",
+    "description": "All sort options in dropdown in Catalog",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "SpringImport\\CatalogDropdownSort\\": ""
+        }
+    },
+    "authors": [
+        {
+            "name": "Mykhailo Shatilov",
+            "email": "mykhailo@springimport.com",
+            "role": "Developer"
+        }
+    ]
+}

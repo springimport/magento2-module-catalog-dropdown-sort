@@ -1,0 +1,24 @@
+<?php
+
+// @codingStandardsIgnoreFile
+
+/**
+ * Product list toolbar
+ *
+ * @var $block \SpringImport\CatalogDropdownSort\Block\Product\ProductList\Toolbar
+ */
+?>
+<div class="toolbar-sorter sorter">
+    <label class="sorter-label" for="sorter"><?php /* @escapeNotVerified */ echo __('Sort By') ?></label>
+    <select id="sorter" data-role="sorter" class="sorter-options">
+        <?php foreach ($block->loadAvailableOrdersForView() as $_key => $_order): ?>
+            <option value="<?php /* @escapeNotVerified */ echo $_key; ?>"
+                <?php if ($block->isOrderAndDirectionCurrent($_key)): ?>
+                    selected="selected"
+                <?php endif; ?>
+                >
+                <?php echo $block->escapeHtml(__($_order)) ?>
+            </option>
+        <?php endforeach; ?>
+    </select>
+</div>
