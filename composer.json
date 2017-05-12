@@ -2,7 +2,6 @@
     "name": "springimport/magento2-module-catalog-dropdown-sort",
     "description": "All sort options in dropdown in Catalog",
     "type": "magento2-module",
-    "version": "0.1.1",
     "license": "MIT",
     "minimum-stability": "dev",
     "authors": [
