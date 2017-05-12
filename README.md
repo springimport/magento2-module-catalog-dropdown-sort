@@ -1,5 +1,9 @@
 # Catalog dropdown sort for Magento 2
-All sort options in dropdown in Catalog
+All sort options in dropdown in Catalog.
+
+Example:
+
+![Example of sorting block](example-of-sorting.PNG?raw=true "Title")
 
 Enable module:
 ```
