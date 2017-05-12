@@ -67,10 +67,10 @@ class Toolbar extends \Magento\Catalog\Block\Product\ProductList\Toolbar
             ],
         ];
 
-        if (in_array($type, $numberTypes)) {
-            $phrases = $ends['number'];
-        } elseif (in_array($type, $stringTypes)) {
+        if (in_array($type, $stringTypes)) {
             $phrases = $ends['string'];
+        } else {
+            $phrases = $ends['number'];
         }
 
         return (isset($phrases)) ? $phrases[$sort] : null;
