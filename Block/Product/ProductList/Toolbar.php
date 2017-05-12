@@ -56,6 +56,7 @@ class Toolbar extends \Magento\Catalog\Block\Product\ProductList\Toolbar
 
         $numberTypes = ['int', 'integer', 'decimal'];
         $stringTypes = ['varchar', 'char', 'static'];
+        $dateTypes = ['date', 'time', 'datetime'];
         $ends = [
             'number' => [
                 SortOrder::SORT_ASC => __('Low-High'),
@@ -65,10 +66,16 @@ class Toolbar extends \Magento\Catalog\Block\Product\ProductList\Toolbar
                 SortOrder::SORT_ASC => __('A-Z'),
                 SortOrder::SORT_DESC => __('Z-A'),
             ],
+            'date' => [
+                SortOrder::SORT_ASC => __('Asc'),
+                SortOrder::SORT_DESC => __('Desc'),
+            ]
         ];
 
         if (in_array($type, $stringTypes)) {
             $phrases = $ends['string'];
+        } elseif (in_array($type, $dateTypes)) {
+            $phrases = $ends['date'];
         } else {
             $phrases = $ends['number'];
         }
