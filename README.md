@@ -10,25 +10,14 @@ All sort options in dropdown in Catalog.
 | 2.2.x | 7.0 - 7.2 | ✅ Compatible |
 | 2.0.x - 2.1.x | 5.5 - 7.1 | ✅ Compatible |
 
-## Usage
-
-Example:
-
-![Example of sorting block](example-of-sorting.PNG?raw=true "Title")
-
 ## Installation
 
-Enable module:
 ```bash
-php -f bin/magento module:enable SpringImport_CatalogDropdownSort
+composer require springimport/magento2-module-catalog-dropdown-sort
+php bin/magento module:enable SpringImport_CatalogDropdownSort
+php bin/magento setup:upgrade
 ```
 
-Disable module:
-```bash
-php -f bin/magento module:disable SpringImport_CatalogDropdownSort
-```
+## Usage
 
-Update system:
-```bash
-php -f bin/magento setup:upgrade
-```
+![Example of sorting block](example-of-sorting.PNG?raw=true "Title")
