@@ -2,6 +2,15 @@
 
 All sort options in dropdown in Catalog.
 
+## Version Compatibility
+
+| Magento Version | PHP Version | Status |
+|-----------------|-------------|--------|
+| **2.3.x - 2.4.x** | **7.2 - 8.3** | **✅ Compatible** |
+| 2.0.x - 2.2.x | 5.6 - 7.2 | ✅ Compatible |
+
+## Usage
+
 Example:
 
 ![Example of sorting block](example-of-sorting.PNG?raw=true "Title")
