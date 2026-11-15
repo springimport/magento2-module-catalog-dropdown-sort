@@ -20,6 +20,15 @@ class Toolbar extends \Magento\Catalog\Block\Product\ProductList\Toolbar
     {
         $attributes = $this->_catalogConfig->getAttributesUsedForSortBy();
         $options = [];
+        $attributeCodes = [];
+        foreach ($attributes as $attribute) {
+            $attributeCodes[] = $attribute->getAttributeCode();
+        }
+        foreach ($this->getAvailableOrders() as $code => $label) {
+            if (!in_array($code, $attributeCodes)) {
+                $options[$code . '-' . $this->_direction] = $label;
+            }
+        }
         foreach ($attributes as $attribute) {
             /* @var $attribute \Magento\Eav\Model\Entity\Attribute\AbstractAttribute */
             $type = $attribute->getBackendType();
