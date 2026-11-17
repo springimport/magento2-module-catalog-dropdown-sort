@@ -43,7 +43,7 @@ class Toolbar extends \Magento\Catalog\Block\Product\ProductList\Toolbar
      *
      * @param string $type
      * @param string $sort
-     * @return \Magento\Framework\Phrase|null
+     * @return \Magento\Framework\Phrase
      * @throws \Exception
      */
     protected function getSortTitleByType($type, $sort)
@@ -80,7 +80,7 @@ class Toolbar extends \Magento\Catalog\Block\Product\ProductList\Toolbar
             $phrases = $ends['number'];
         }
 
-        return (isset($phrases)) ? $phrases[$sort] : null;
+        return $phrases[$sort];
     }
 
     /**
